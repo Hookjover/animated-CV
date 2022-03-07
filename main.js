@@ -139,8 +139,10 @@ addContent();
 var addCSS = function () {
     setTimeout(function () {
         csswrap.innerHTML = webCSS.substring(0, a)
-        a++;
-        addCSS()
+        if (a < webCSS.length) {
+            a++;
+            addCSS()
+        }
         if (/^[a-za-z]$/.test(webCSS[a]) || /^[0-9]$/.test(webCSS[a])) {
             typingSpeed = 20
         } else { typingSpeed = 100 }
