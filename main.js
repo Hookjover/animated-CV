@@ -114,7 +114,7 @@ let webCSS = `/*>你好，我是Jared，
 }
 
 `
-let typingSpeed = 10;
+let typingSpeed = 100;
 let i = 1;
 let a = 1;
 let wrap = document.querySelector('#all-wrap')
@@ -131,7 +131,7 @@ var addContent = function () {
         }
         if (/^[a-za-z]$/.test(webContent[i]) || /^[0-9]$/.test(webContent[i])) {
             typingSpeed = 20
-        } else { typingSpeed = 10 }
+        } else { typingSpeed = 100 }
     }, typingSpeed)
 }
 addContent();
@@ -143,7 +143,7 @@ var addCSS = function () {
         addCSS()
         if (/^[a-za-z]$/.test(webCSS[a]) || /^[0-9]$/.test(webCSS[a])) {
             typingSpeed = 20
-        } else { typingSpeed = 10 }
+        } else { typingSpeed = 100 }
     }, typingSpeed)
 }
 addCSS();
